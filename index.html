@@ -33,12 +33,12 @@
             
             <form id="registroForm">
                 <div class="form-group">
-                    <label for="nombre">Descripción del Gasto</label>
-                    <input type="text" id="nombre" placeholder="Ej. Almuerzo, Supermercado" required>
+                    <label for="descripcionGasto">Descripción del Gasto</label>
+                    <input type="text" id="descripcionGasto" placeholder="Ej. Almuerzo, Supermercado" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Monto / Notas</label>
-                    <input type="text" id="email" placeholder="Ej. S/ 45.00" required>
+                    <label for="montoGasto">Monto / Notas</label>
+                    <input type="text" id="montoGasto" placeholder="Ej. S/ 45.00" required>
                 </div>
                 <button type="submit" id="submitBtn" class="btn">Guardar Gasto</button>
             </form>
@@ -81,8 +81,8 @@
             const mensaje = document.getElementById('mensaje');
             
             const payload = {
-                nombre: document.getElementById('nombre').value,
-                email: document.getElementById('email').value
+                descripcion: document.getElementById('descripcionGasto').value,
+                monto: document.getElementById('montoGasto').value
             };
 
             submitBtn.disabled = true;
